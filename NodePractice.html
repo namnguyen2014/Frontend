@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="StyleSheet" href="StyleSheet.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<title>Login Page</title>
+</head>
+<body>
+<header>
+	<h2>My Login Page</h2>
+</header>
+<form>
+<!-- Username field-->
+	<label for="username">Username</label> <br>
+	<input type="text" id="username" name="txtUsername" placeholder="Enter your username..." title="Username of Admin"><br>
+	<label id="errorUsername" for="error"></label><br>
+<!-- Password field-->
+	<div class="group">
+	<label for="password">Password</label><br>
+	<input type="password" id="password" name="txtPassword" placeholder="Enter your password..." title="Password of Admin"><br>
+	<label id="errorPassword" for="error"></label><br>
+	<i id="eyeIcon" class="glyphicon glyphicon-eye-open"></i>
+	</div>
+<!-- Remember Password checkbox-->	
+	<input id="chbxRemember" type="checkbox" name="checkboxRemember">
+	<label id="lbRemember" for="remember">Remember</label>
+<!-- Login button -->	
+	<input type="button" name="btnLogin" value="Login" onclick="Login()" title="Click here to Detail">
+</form>
+<script type="text/javascript">
+	function Login () {
+		var username = document.getElementById("username").value;
+		var password = document.getElementById("password").value;
+
+		if(username != "admin")
+		{
+			//using Jquery
+			$("#errorUsername").text("Username is invalid.");
+		}
+		if(password != "admin")
+		{
+			//using Jquery
+			$("#errorPassword").text("Password is invalid.");
+		} else if (username == "admin" && password == "admin")
+		{
+			window.open("Detail.html");
+		}
+	}
+</script>
+<script type="text/javascript">
+	function eyeActions () {
+		var eyeIcon = document.getElementById("eyeIcon").className;
+
+		
+	}
+</script>
+</body>
+</html> 

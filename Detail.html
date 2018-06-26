@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="StyleSheet" href="StyleSheet.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<title>Employee Detail</title>
+</head>
+<body>
+<h1 title="I'm a tooltip">Detail Page</h1>
+<!-- Table of Info -->
+<a href="NodePractice.html"> << Back</a> <!-- Back link -->
+<table>
+		<tr>
+		<th>Title</th>
+		<td><input type="text" id="enableTitle" name="title" disabled="disabled"></td>
+		<td><input type="button" id="changeTitle" onclick="enableTitle()" value="Edit"></input></td>
+	</tr>
+	<tr>
+		<th>First Name</th>
+		<td><input type="text" id="enableFname" name="fname" disabled="disabled"></td>
+		<td><input type="button" id="changeFname" onclick="enableFname()" value="Edit"></input></td>
+	</tr>	
+	<tr>
+		<th>Last Name</th>
+		<td><input type="text" id="enableLname" name="lname" disabled="disabled"></td>
+		<td><input type="button" id="changeLname" onclick="enableLname()" value="Edit"></input></td>
+	</tr>
+		<th>Birthday</th>
+		<td><input type="text" id="enableDoB" name="dob" disabled="disabled"></td>
+		<td><input type="button" id="changeDoB" onclick="enableDoB()" value="Edit"></input></td>
+	<tr>
+		<th>Address</th>
+		<td><input type="text" id="enableAddress" name="address" disabled="disabled"></td>
+		<td><input type="button" id="changeAddress" onclick="enableAdress()" value="Edit"></input></td>
+	</tr>
+</table>
+<input type="button" id= "btnSubmit" name="btnSubmit" onclick="submitInfo()" value="Submit">
+<script>
+	function enableFname() {
+		document.getElementById("enableFname").disabled = false;
+		document.getElementById("changeFname").value = "Save";
+
+	}
+	function enableLname() {
+		document.getElementById("enableLname").disabled = false;
+		document.getElementById("changeLname").value = "Save";
+
+	}
+	function enableDoB() {
+		document.getElementById("enableDoB").disabled = false;
+		document.getElementById("changeDoB").value = "Save";
+
+	}
+	function enableAdress() {
+		document.getElementById("enableAddress").disabled = false;
+		document.getElementById("changeAddress").value = "Save";
+
+	}
+	function enableTitle() {
+		document.getElementById("enableTitle").disabled = false;
+		document.getElementById("changeTitle").value = "Save";
+
+	}
+	function submitInfo(){
+		var textOfFname = document.getElementById("enableFname").value;
+		var textOfLname = document.getElementById("enableLname").value;
+		var textOfDoB = document.getElementById("enableDoB").value;
+		var textOfAddress = document.getElementById("enableAddress").value;
+		var textOfTitle = document.getElementById("enableTitle").value;
+
+		var newfile = new File([textOfTitle, textOfFname, textOfLname, textOfDoB,textOfAddress], 'foobar.txt');
+
+		var file = new Blob([newfile], {type: "text/plain"});
+    	if (window.navigator.msSaveOrOpenBlob) // IE10+
+        		window.navigator.msSaveOrOpenBlob(file, filename);
+    	else { // Others
+	        var a = document.createElement("a"),
+	        url = URL.createObjectURL(file);
+	        a.href = url;
+	        a.download = 'fileText';
+	        document.body.appendChild(a);
+	        a.click();
+	        setTimeout(function() {
+	            document.body.removeChild(a);
+	            window.URL.revokeObjectURL(url);  
+        }, 0); 
+    }
+
+	}
+</script>
+</body>
+</html> 

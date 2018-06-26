@@ -1,0 +1,147 @@
+IOS (749 - test net)
+1. Restore -> click Reference link -> crash
+Base: iPhone 6 Plus
+truly: iPhone 7
+
+Current build
+iPhone 7: 732 -> 774
+base record cry moral charge tube raven sign void timber they door
+
+iPhone 6: 732 - 774
+you truly cannon high domain ridge eagle gentle stumble broom power worth
+
+SEND:
+732 to 732 -> Upgrade
+732 to 774: Failed (774 does not receive)
+774 to 732: Failed (Address invalid)
+774 to 774: Failed (Address invalid)
+
+RECEIVE:
+732 receive from 732 -> Upgrade
+732 receive from 774 -> Upgrade
+774 receive from 732
+732 receive from 774
+
+Passpharse:
+client fossil chair wheel  dilemma artist tennis sight eager decline funny wealth
+
+QUANTA WALLET (show price USD-ETH): 
+Testnet: monitor basic buyer tone magic sad review opinion beef float implulse alien
+Mainnet: diamond genre palm payment come ordinary before cat hover consider smile again
+
+Passphrase "NEW WALLET Desktop Ver"
+demise present goose wear quick want alone poet menu path display sign
+
+1. copper siren differ use like egg sight where spoon learn swamp swarm
+2. saddle marriage volcano stool organ federal february elbow art extra wood thunder
+3. involve note unlock relief cliff general quiz tourist grid consider miracle early
+4. system network weekend eyebrow creek unit access bottom cost goddess day video
+
+
+Notes for Automation
+1. Verify amount transfer
+2. Error callback for all funtions
+3. Action ID should change
+----------------------------------------------------------------------------------
+iPhone 6 Plus: 
+0.014484 BTC (121.35 USD)
+0.012881 ETH (7.51 USD)
+43.142857 QNTU (0.06 USD)
+
+1. Click change Asset
+2. Enter wrong password
+3. Click Yes
+Observed result: Display error "Invalid Password"
+4. Close popup, click again on "Change Asset"
+Observed result: Display error "Invalid Password"
+Expected result: Do not display error if do not enter wrong password
+
+
+
+1. App: Quanta Wallet (Ropsten)
+2. Seeds: 2 Seed co QNTU
+3. Device: iPhone X
+
+seven stable display regular provide demand clean best health negative myself next
+
+Android sells 10 QNTU with 0.1 ETH
+=> iOS buy (1100 QNTU, 2 ETH) 
+
+Do not have asset Pair with QNTU - ETH/BTC
+Balance is 0, cannot see sell cmd
+
+Withdraw 1 QNTU from Lykke
+Quanta Wallet has 1,000.997799 (1.4 USD)
+-> OK
+
+Withdraw 1 QNTU from iOS (Lykke - avai 19)
+Quanta Wallet has 1,001.997799 (1.4 USD)
+
+Send QNTU to Lykke: OK
+
+Sell QNTU to buy ETH: OK
+
+Withdraw QNTU: OK
+
+Send BTC to Lykke: Failed (Quanta Wallet cannot send)
+
+Sell QNTU to Buy BTC: Do not have BTC to buy
+
+When I use iPhone sell QNTU, after that in Android device, at QNTU I click Buy, but app display "You haven't got any assesst yet" but I have 900 QNTU and 1.1 ETH.
+
+New email is sent. Please check your email again. " GET /api/Candles/history/{market}/{assetPair}/{period}/{type}/{from}/{to}" 
+
+UAT Report 
+Platform: ANDROID
+Quanta Wallet version 1.3.0
+Device: SONY Xperia, LG G4
+
+Functions:
+1. Install: OK
+2. Uninstall: OK
+3. Send QNTU
+   + Without Network: Do not display popup Network
+   + Without Balance: OK
+   + Send to itslef: OK
+   + Send: OK
+4. Restore Wallet
+   + Without network: Failed - Do not display balance (after ON Network)
+   + With network: OK (1st time restore does not display balance - LG G4)
+5. Create Wallet
+   + Without Network: OK
+   + With Network: OK
+6. USD Price displays correctly (get from API): OK
+7. ETH Price displays correctly (get from API): OK
+8. Send ETH:
+   + Without Network: OK
+   + Without Balance: OK
+   + Send to itslef: OK
+   + Send: 
+9. Send BTC:
+   + Without Network: (Display "You can not send BTC now")
+   + Without Balance: OK
+   + Send to itslef: OK
+   + Send: OK
+
+honey romance absent idea calm move wall truth soul nature fashion range
+
+Randao Page on Staging 
+Link: https://sta.quanta.im/randao
+Window:
++ UI: displays 4 Downloads (Windows, MAC, Android, iOS) 
+
+Meeting Minutes (25/05/2018)
+- Thống nhất:
++ Thêm cột "Version" vào file TCs
++ Thêm cột "Status" vào file TCs (gom New, In-Review, Need-Update, Need-Review, Completed)
++ Thêm cột "Reviewer" vào file TCs
++ Thêm cột "Writter" vào file TCs
++ File Master: ko co "Result"
+
+0.00104 ETH
+
+$ 0.69760
+
+26/6: Staging Rinkeby Quanta Game Wallet:
+Passphrase: bamboo coin phone run deal exhaust stone kitten army say trip cigar
+Address: 0x0a6ea45159006647778a99b3794678dec56ab1a2
