@@ -29,15 +29,27 @@
 	<input type="button" name="btnLogin" value="Login" onclick="Login()" title="Click here to Detail">
 </form>
 <script type="text/javascript">
+	$( document ).ready(function() {
+		$("#username", "#password").on('keyup', function(evt) {
+			// console.log($(this).val());
+			// $("#errorUsername").text(this.value != "admin" ? "Username is invalid.": "");
+		if($("#username").text(this.value != "admin"))
+		{
+			console.log($(this).val());
+			$("#errorUsername").text(this.value != "admin" ? "Username is invalid.": "");
+		}
+		
+		if($("#password").text(this.value != "admin"))
+		{
+			console.log($(this).val());
+			$("#errorPassword").text(this.value != "admin" ? "Password is invalid.": "");
+		}
+		});
+
 	function Login () {
 		var username = document.getElementById("username").value;
 		var password = document.getElementById("password").value;
 
-		if(username != "admin")
-		{
-			//using Jquery
-			$("#errorUsername").text("Username is invalid.");
-		}
 		if(password != "admin")
 		{
 			//using Jquery
@@ -47,13 +59,23 @@
 			window.open("Detail.html");
 		}
 	}
+});
 </script>
-<script type="text/javascript">
-	function eyeActions () {
-		var eyeIcon = document.getElementById("eyeIcon").className;
-
-		
-	}
+<script>
+		$("#eyeIcon").click(function() {
+		if($("#eyeIcon").hasClass("glyphicon-eye-open"))
+		{
+			console.log("Has class");
+			$("#password").prop("type", "text"); // change attribute value
+			$("#eyeIcon").removeClass("glyphicon-eye-open");
+			$("#eyeIcon").addClass("glyphicon-eye-close");
+		} else
+		{
+			$("#password").prop("type", "password");
+			$("#eyeIcon").addClass("glyphicon-eye-open");
+			$("#eyeIcon").removeClass("glyphicon-eye-close");
+		}
+	});
 </script>
 </body>
 </html> 

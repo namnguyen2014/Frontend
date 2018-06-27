@@ -49,6 +49,9 @@ input[type=button]{
     border-radius: 4px;
     box-sizing: border-box;
 }
+input[type=button]{
+	font-weight: bold;
+}
 #errorUsername, #errorPassword{
 	color: red;
 }
