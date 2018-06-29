@@ -12,14 +12,15 @@
 </header>
 <form>
 <!-- Username field-->
+	<i id="iconUser" class="glyphicon glyphicon-user"></i>
 	<label for="username">Username</label> <br>
 	<input type="text" id="username" name="txtUsername" placeholder="Enter your username..." title="Username of Admin"><br>
-	<label id="errorUsername" for="error"></label><br>
+	<label id="errorCommon" for="error"></label><br>
 <!-- Password field-->
 	<div class="group">
 	<label for="password">Password</label><br>
 	<input type="password" id="password" name="txtPassword" placeholder="Enter your password..." title="Password of Admin"><br>
-	<label id="errorPassword" for="error"></label><br>
+	<label id="errorCommon" for="error"></label><br>
 	<i id="eyeIcon" class="glyphicon glyphicon-eye-open"></i>
 	</div>
 <!-- Remember Password checkbox-->	
@@ -31,38 +32,11 @@
 <script type="text/javascript">
 	$( document ).ready(function() {
 		$("#username", "#password").on('keyup', function(evt) {
-			// console.log($(this).val());
-			// $("#errorUsername").text(this.value != "admin" ? "Username is invalid.": "");
-		if($("#username").text(this.value != "admin"))
-		{
 			console.log($(this).val());
-			$("#errorUsername").text(this.value != "admin" ? "Username is invalid.": "");
-		}
-		
-		if($("#password").text(this.value != "admin"))
-		{
-			console.log($(this).val());
-			$("#errorPassword").text(this.value != "admin" ? "Password is invalid.": "");
-		}
+			$("#errorCommon").text(this.value != "admin" ? "Username or Password is invalid.": "");
 		});
-
-	function Login () {
-		var username = document.getElementById("username").value;
-		var password = document.getElementById("password").value;
-
-		if(password != "admin")
-		{
-			//using Jquery
-			$("#errorPassword").text("Password is invalid.");
-		} else if (username == "admin" && password == "admin")
-		{
-			window.open("Detail.html");
-		}
-	}
 });
-</script>
-<script>
-		$("#eyeIcon").click(function() {
+	$("#eyeIcon").click(function() {
 		if($("#eyeIcon").hasClass("glyphicon-eye-open"))
 		{
 			console.log("Has class");
@@ -76,6 +50,21 @@
 			$("#eyeIcon").removeClass("glyphicon-eye-close");
 		}
 	});
+</script>
+<script>
+function Login () {
+		var username = document.getElementById("username").value;
+		var password = document.getElementById("password").value;
+
+		if(password != "admin")
+		{
+			//using Jquery
+			$("#errorCommon").text("Password is invalid.");
+		} else if (username == "admin" && password == "admin")
+		{
+			window.open("Detail.html","_self"); // Open in current tab
+		}
+	}
 </script>
 </body>
 </html> 
