@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>myFin Tracking</title>
+<link rel="icon" type="image/x-icon" href="/myAsset/favicon.ico">
+<!--<link rel="stylesheet" href="/myCSS/style.css"> -->
+<style>
+h1 {
+    text-align: center;
+    font-family: 'Courier New', monospace;
+    font-weight: normal;
+}
+table{
+    width: 100%;
+    border: 1px solid;
+}
+th, td{
+    border: 1px solid;
+    font-family: 'Courier New', Courier, monospace;
+}
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+td{
+    text-align: center;
+}  
+#btn_UpdateAsset{
+  padding: 3px;
+  box-shadow: 0.5px;
+  border-color: greenyellow;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+#div-UpdateForm{
+  display: none;
+}
+#formUpdate input :nth-child(text), #formUpdate input :nth-child(select){
+  width: 100%;
+  padding: 5px;
+  margin: 5px 0 22px 0;
+}
+#formUpdate{
+  max-width: 300px;
+  /* RIGHT - TOP - BOTTOM - LEFT */
+  padding: 5px;
+  background-color: rgb(181, 176, 176);
+}
+</style>
+</head>
+<body>
+  <header></header>
+  <nav></nav>
+  <section>
+    <div id="div-assetSum">
+      <h1>Assets Summary</h1>
+      <div id="div-actions">
+        <input type="button" value="update" id="btn_UpdateAsset" onclick="openUpdateForm()"> 
+      </div>
+      <table id="tbl-Assets">
+        <tr>
+          <th>Assets</th>
+          <th>Pre-Value</th>
+          <th>Post-Value</th>
+          <th>Changes</th>
+        </tr>
+        <tr>
+          <td>USDT</td>
+          <td>2000</td>
+          <td>...</td>
+          <td>...</td>
+        </tr>
+        <tr>
+          <td>BNB</td>
+          <td>0.5</td>
+          <td>...</td>
+          <td>...</td>
+        </tr>
+        <tr>
+          <td>BETH</td>
+          <td>0.2</td>
+          <td>...</td>
+          <td>...</td>
+        </tr>
+      </table>
+    </div>
+    <div id="div-history">
+      <h1>History</h1>
+        <table id="tbl-History">
+          <tr>
+              <th>Date</th>
+              <th>Asset</th>
+              <th>Amount</th>
+              <th>Changed</th>
+          </tr>
+          <tr>
+              <td>20/02/2022</td>
+              <td>USDT</td>
+              <td>3000</td>
+              <td>+ 1000</td>
+          </tr>
+      </table>
+    </div>
+  </section>
+  <div id="div-UpdateForm">
+    <form action="form-popup" id="formUpdate">
+      <label><b>Select Asset</b></label>
+      <select id="assets-dropdown">
+        <option value="usdt">USDT</option>
+        <option value="usdt">BNB</option>
+        <option value="usdt">BETH</option>
+        <option value="usdt">XVG</option>
+      </select>
+
+      <input type="text" placeholder="Enter the new Amount" id="txt-AssetAmount">
+      <input type="button" value="add new" id="btn-Add-Asset" onclick="addNewAsset()">
+
+      <input type="submit" value="submit" id="btn-Submit-Update" onclick="updateAsset()">
+
+    </form>
+  </div>
+  <script>
+    function openUpdateForm(){
+      document.getElementById("div-UpdateForm").style.display = "block";
+    }
+  </script>
+  <footer></footer>
+</body>
+</html>
+
+
